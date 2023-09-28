@@ -4,7 +4,7 @@
     padding-top: 10px;
     margin: auto;
     height: max-content;
-    width: max-content;
+    // width: 50%;
 }
 p {
     text-align: center;
@@ -13,8 +13,8 @@ p {
 
 .input {
     position: relative;
+    width: 50%;
     input {
-
         border: 1px solid gray;
         padding: 15px;
         width: 100%;
@@ -22,4 +22,36 @@ p {
         margin-bottom: 10px;
     }
 
+}
+
+.dropdown {
+    list-style: none;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    right: 0;
+    max-height:500px;
+    background-color: #ffff;
+    overflow-y: scroll;
+
+    .li {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      &:hover {
+        background-color: gray;
+        color: white;
+        cursor: pointer
+      }   
+
+      img {
+        border-radius: 50%;
+      }
+      .infoSection {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
 }
