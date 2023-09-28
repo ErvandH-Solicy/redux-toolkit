@@ -23,9 +23,6 @@ export default function RepoCard({ repo, user }: { repo: IRepo, user?: IUs | und
         setIsFav(false)
     }
 
-    console.log(isFav);
-    
-
     return (
         <div className={styles.container}>
             <a href={repo.html_url} target="_blank">
