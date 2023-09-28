@@ -3,7 +3,7 @@ import users from "../slices/data";
 
 const rootReducer = () =>
     combineReducers({
-        users
+        users,
     })
 
 export { rootReducer }

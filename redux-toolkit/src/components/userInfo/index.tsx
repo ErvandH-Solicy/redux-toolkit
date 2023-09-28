@@ -10,7 +10,7 @@ export default function UserInfo(): JSX.Element {
     const [userData, setUserData] = useState<IUser[]>([])
     const navigate = useNavigate();
     const { id } = useParams();
-    const { data } = useSelector((state: RootState) => state.users);
+    const { data } = useSelector((state: RootState) => state.rootReducer.users);
 
     useEffect(() => {
         if (id && data) {

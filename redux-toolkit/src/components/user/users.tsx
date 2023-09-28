@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './user.module.scss';
 
 export default function Users() {
-  const { data, status, error } = useSelector((state: RootState) => state.users);
+  const { data, status, error } = useSelector((state: RootState) => state.rootReducer.users);
   const dispatch = useDispatch();
   const [isValue, setIsValue] = useState('');
   const navigate = useNavigate();

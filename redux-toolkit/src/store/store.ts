@@ -1,9 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { rootReducer } from "./root.reducer"; 
+import { rootReducer } from "./root.reducer";
 import { useDispatch } from 'react-redux'
+import { githubApi } from "../slices/github.api";
 
 const store = configureStore({
-    reducer: rootReducer()
+    reducer: {
+        rootReducer: rootReducer(),
+        [githubApi.reducerPath]: githubApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(githubApi.middleware), 
 })
 
 export type RootState = ReturnType<typeof store.getState>;
