@@ -14,12 +14,12 @@ export default function UserInfo(): JSX.Element {
 
     useEffect(() => {
         if (id && data) {
-            const user = data.find((u: any) => u.id == id)
+            const user = data.find((u: any) => u.id === id)
             if (user) setUserData([user])
         } else {
             setUserData([])
         }
-    }, [])
+    }, [data, id])
 
     const back = () => {
         navigate('/')

@@ -25,7 +25,7 @@ export default function RepoCard({ repo, user }: { repo: IRepo, user?: IUs | und
 
     return (
         <div className={styles.container}>
-            <a href={repo.html_url} target="_blank">
+            <a href={repo.html_url} target="_blank" rel="noreferrer" >
                 <h2>{repo.full_name}</h2>
                 <ul>
                     <li className={styles.list}>

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 import styles from './user.module.scss';
 
-export default function Users() {
+export default function Users(): JSX.Element {
   const { data, status, error } = useSelector((state: RootState) => state.rootReducer.users);
   const dispatch = useDispatch();
   const [isValue, setIsValue] = useState('');
@@ -30,7 +30,7 @@ export default function Users() {
 
   useEffect(() => {
     dispatch(fetchUserData());
-  }, []);
+  }, [dispatch]);
 
   const routeUserInfo = (id: any) => {
     navigate(`/userInfo/${id}`)
@@ -43,9 +43,9 @@ export default function Users() {
         <button type="button" onClick={handleAddUser} className={styles.addUserButton}>Add User</button>
       </div>
       {data?.map((e: IUser) => (
-        <div className={styles.container}>
+        <div key={e.id} className={styles.container}>
           <div className={styles.userInfoSection}>
-            <div key={e.id} onClick={() => routeUserInfo(e?.id)} className={styles.userName}>{e.name}</div>
+            <div  onClick={() => routeUserInfo(e?.id)} className={styles.userName}>{e.name}</div>
           </div>
           <div className={styles.iconSection}>
             <button className={styles.delete}

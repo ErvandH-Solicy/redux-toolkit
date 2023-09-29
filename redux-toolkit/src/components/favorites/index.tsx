@@ -10,7 +10,7 @@ export default function Favorites() {
             <ul className={styles.container}>
                 {favorites.map(f => (
                     <li key={f} className={styles.lisa}>
-                        <a href={f} target='_blank'>{f}</a>
+                        <a href={f} target='_blank' rel="noreferrer" >{f}</a>
                     </li>
                 ))}
             </ul>
