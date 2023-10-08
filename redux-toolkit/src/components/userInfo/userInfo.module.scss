@@ -1,0 +1,26 @@
+.userInfoContainer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+
+    .data {
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 350px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            text-align: center !important;
+        }
+    }
+}
+
+.back {
+    margin-left: 20px;
+    cursor: pointer;
+}

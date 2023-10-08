@@ -1,0 +1,25 @@
+.container {
+  list-style: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  margin: auto;
+  height: max-content;
+}
+.lisa {
+  border-radius: 10px;
+  margin-bottom: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  &:hover {
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+  }
+}
